@@ -17,8 +17,8 @@ import {
 export async function getOnChainActions(wallet: WalletClientBase) {
     const actionsWithoutHandler = [
         {
-            name: "SWAP_TOKENS",
-            description: "Swap two different tokens using KIM protocol",
+            name: "BUY_FROM_WORLDSTORE",
+            description: "Buy products listed for sale on Worldstore",
             similes: [],
             validate: async () => true,
             examples: [],
@@ -28,8 +28,15 @@ export async function getOnChainActions(wallet: WalletClientBase) {
 
     const tools = await getOnChainTools({
         wallet: wallet,
-        // 2. Configure the plugins you need to perform those actions
-        plugins: [sendETH(), erc20({ tokens: [USDC, MODE] }), kim()],
+        plugins: [
+            // worldstore(),
+            // crossmintHeadlessCheckout(
+            //     {
+            //         apiKey: process.env.CROSSMINT_SERVER_API_KEY as string,
+            //         myCallDataSchema
+            //     }
+            // )
+            ],
     });
 
     // 3. Let GOAT handle all the actions

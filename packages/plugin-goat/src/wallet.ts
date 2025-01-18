@@ -2,11 +2,11 @@ import { WalletClientBase } from "@goat-sdk/core";
 import { viem } from "@goat-sdk/wallet-viem";
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { mode } from "viem/chains";
+import { base } from "viem/chains";
 
 // Add the chain you want to use, remember to update also
 // the EVM_PROVIDER_URL to the correct one for the chain
-export const chain = mode;
+// export const chain = ;
 
 export function getWalletClient(
     getSetting: (key: string) => string | undefined
@@ -19,11 +19,11 @@ export function getWalletClient(
 
     const wallet = createWalletClient({
         account: privateKeyToAccount(privateKey as `0x${string}`),
-        chain: chain,
+        chain: base,
         transport: http(provider),
     });
 
-    return viem(wallet);
+    return viem(wallet as any);
 }
 
 export function getWalletProvider(walletClient: WalletClientBase) {

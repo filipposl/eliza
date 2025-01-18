@@ -1726,23 +1726,26 @@ importers:
         specifier: workspace:*
         version: link:../core
       '@goat-sdk/adapter-vercel-ai':
-        specifier: 0.2.0
-        version: 0.2.0(@goat-sdk/core@0.4.0)(ai@4.0.33(react@19.0.0)(zod@3.23.8))
+        specifier: latest
+        version: 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(ai@4.0.33(react@19.0.0)(zod@3.23.8))(zod@3.23.8)
       '@goat-sdk/core':
-        specifier: 0.4.0
-        version: 0.4.0
+        specifier: latest
+        version: 0.4.6(zod@3.23.8)
+      '@goat-sdk/plugin-crossmint-headless-checkout':
+        specifier: latest
+        version: 0.0.4(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
       '@goat-sdk/plugin-erc20':
-        specifier: 0.2.2
-        version: 0.2.2(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
-      '@goat-sdk/plugin-kim':
-        specifier: 0.1.2
-        version: 0.1.2(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+        specifier: latest
+        version: 0.2.8(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+      '@goat-sdk/plugin-worldstore':
+        specifier: latest
+        version: 0.0.2(@goat-sdk/core@0.4.6(zod@3.23.8))
       '@goat-sdk/wallet-evm':
-        specifier: 0.2.0
-        version: 0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+        specifier: latest
+        version: 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       '@goat-sdk/wallet-viem':
-        specifier: 0.2.0
-        version: 0.2.0(@goat-sdk/wallet-evm@0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+        specifier: latest
+        version: 0.2.6(@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
       tsup:
         specifier: 8.3.5
         version: 8.3.5(@swc/core@1.10.7(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
@@ -4285,6 +4288,15 @@ packages:
   '@cosmology/lcd@0.13.5':
     resolution: {integrity: sha512-CI8KFsJcgp0RINF8wHpv3Y9yR4Fb9ZnGucyoUICjtX2XT4NVBK+fvZuRFj5TP34km8TpEOb+WV2T7IN/pZsD7Q==}
 
+  '@crossmint/client-sdk-base@1.4.4':
+    resolution: {integrity: sha512-TkerlGDrsiu8LqyU03PY1gqp5NlNZxU4mMnx82tu5v7pZBiU11gxh7xXVijw/oPQoAQkosmHzxKqGpMPac5+uA==}
+
+  '@crossmint/client-sdk-window@0.2.2':
+    resolution: {integrity: sha512-JGNdAz4HNoyUXGOCs9sBOiH/WLaC1iamXw1ZHVPl/Kxs0wYKYu6vkau7UJ693FHKHm4G64EoCYKEoacag/7vnw==}
+
+  '@crossmint/common-sdk-base@0.3.1':
+    resolution: {integrity: sha512-07M1epHTEfvsbsu7BoBrHgH6ou2LUEymWyQUiSKn8zChmRPNG1ZFGiBQpqkfhyp3zGvLn2L9GzEbqk9dNwrFfw==}
+
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
@@ -4540,6 +4552,17 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       postcss: ^8.4
+
+  '@datadog/browser-core@4.42.2':
+    resolution: {integrity: sha512-LnkcdFyNRpMEuvV1ePfKdgRvYh+VqqAiVRoAmgObcuzdYdIwQSfcJp4GFbBgr5v7uF2uhAp/b96MIyKlqi0Ixg==}
+
+  '@datadog/browser-logs@4.42.2':
+    resolution: {integrity: sha512-idl9DilUGmWbmYb1D6VPmkpnhqaIdsQ08qjOw1c0QbtGUAFlFYyFCrugf2qwMt8QbJ8DqvEiwULTVAZOV9O4kA==}
+    peerDependencies:
+      '@datadog/browser-rum': 4.42.2
+    peerDependenciesMeta:
+      '@datadog/browser-rum':
+        optional: true
 
   '@deepgram/captions@1.2.0':
     resolution: {integrity: sha512-8B1C/oTxTxyHlSFubAhNRgCbQ2SQ5wwvtlByn8sDYZvdDtdn/VE2yEPZ4BvUnrKWmsbTQY6/ooLV+9Ka2qmDSQ==}
@@ -5815,23 +5838,32 @@ packages:
   '@gerrit0/mini-shiki@1.26.1':
     resolution: {integrity: sha512-gHFUvv9f1fU2Piou/5Y7Sx5moYxcERbC7CXc6rkDLQTUBg5Dgg9L4u29/nHqfoQ3Y9R0h0BcOhd14uOEZIBP7Q==}
 
-  '@goat-sdk/adapter-vercel-ai@0.2.0':
-    resolution: {integrity: sha512-NqUyO38i6ELbWXSDHddfkD1k4QCUcvfs3jVQArlJ9OO9NSlkKvnbZjO1tTjoVoERjRKfKsCqfMPgsgo3akx7tA==}
+  '@goat-sdk/adapter-vercel-ai@0.2.7':
+    resolution: {integrity: sha512-y6W7ZOpe4bh7PiafzcY87RsgbVBr6ESKGdxLbJ1bQNbm/6DPJyXC8lpRi4zy+OOzbHtwupCl50w7jteJuwf6XA==}
     peerDependencies:
-      '@goat-sdk/core': 0.4.0
+      '@goat-sdk/core': 0.4.6
       ai: 4.0.3
+      zod: ^3.0.0
 
   '@goat-sdk/core@0.3.8':
     resolution: {integrity: sha512-1H8Cziyjj3bN78M4GETGN8+/fAQhtTPqMowSyAgIZtC/MGWvf41H2SR0FNba/xhfCOALhb0UfhGOsXCswvM5iA==}
     engines: {node: '>=20.12.2 <21', npm: please-use-pnpm, pnpm: '>=9', yarn: please-use-pnpm}
 
-  '@goat-sdk/core@0.4.0':
-    resolution: {integrity: sha512-x7TVQ+3IS8bS+44O+ZkbS2R6IDXO0dOcRNWe5psU8Aqrb7/48Fe1ILN2Pif0sv34y1WkPYPlqoPINl/TiatIVQ==}
+  '@goat-sdk/core@0.4.6':
+    resolution: {integrity: sha512-jFk0G9d/WlR1juIhCKtgEr7HBi2v7/veqouP1Zm1KC6EU2bNHXMYrh2TkeO1wjep3ur1MK4DDY1c+rS4WSY/7g==}
+    peerDependencies:
+      zod: ^3.0.0
 
   '@goat-sdk/plugin-coingecko@0.1.4':
     resolution: {integrity: sha512-i85v/SeCXB7/fcqZKc0hV68/3FrUAHJSL4N5AUp5OPauzV5kq4Ecn0WjeDZEHX8iCEEY1NZSZ47yweDckAhjhA==}
     peerDependencies:
       '@goat-sdk/core': 0.3.14
+      viem: 2.21.58
+
+  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.4':
+    resolution: {integrity: sha512-liCU+VKNmDW2TGdB70nA18BUVwV1U9iWbHEHAQCAqg7PGwCgIVHLKyg7KaWsaOoVFweGXssjZKAZ+eMCfKxrog==}
+    peerDependencies:
+      '@goat-sdk/core': 0.4.6
       viem: 2.21.58
 
   '@goat-sdk/plugin-erc20@0.1.7':
@@ -5841,22 +5873,21 @@ packages:
       '@goat-sdk/core': 0.3.8
       viem: 2.21.58
 
-  '@goat-sdk/plugin-erc20@0.2.2':
-    resolution: {integrity: sha512-uobj8A2GRAHAU8PNY9Be0iA8p+311zRDIRKHRQX0uooCWD4CxD6iMj99Q4RvBl8Es+Kc7JMQPRoZzMLawJUSJw==}
+  '@goat-sdk/plugin-erc20@0.2.8':
+    resolution: {integrity: sha512-KVz4g3YtLWxmj0+ahi8Zy9DXPCsHn+dFvoN2cJRzrDWTbeTh8tNPl33FT2sf9P9p9R7vV/9YmFJd0iUVh9Nf/Q==}
     peerDependencies:
-      '@goat-sdk/core': 0.4.0
+      '@goat-sdk/core': 0.4.6
       viem: 2.21.58
 
-  '@goat-sdk/plugin-kim@0.1.2':
-    resolution: {integrity: sha512-jZ7PTjGk7LPGAmMflhAieZsE0Q28TWinNNuDnljrp6NdfjrLK3wLOQB9syWyFHDCsa+RiddSVjr1ZQJkPFhfKw==}
+  '@goat-sdk/plugin-worldstore@0.0.2':
+    resolution: {integrity: sha512-ThZqe27gPSI/WI0aKXWsmjzUJ9dEyLfbFiaERJmVv9e6cVip23fFayKff0wLM73qRn2JhYtPFh34yRhIjciTRg==}
     peerDependencies:
-      '@goat-sdk/core': 0.4.0
-      viem: 2.21.58
+      '@goat-sdk/core': 0.4.6
 
-  '@goat-sdk/wallet-evm@0.2.0':
-    resolution: {integrity: sha512-w/sWi7WHsTz8G+jNWI0xJ+l4wWOVFrSxh7PHfYOEZQyFexOioEdEG5QGYkgYT3/VoYApsx9G1H8itKxs1Mg5Mw==}
+  '@goat-sdk/wallet-evm@0.2.6':
+    resolution: {integrity: sha512-KzC2jbfGi0CsVLLWyvxQheFWNuKMKiafgjyGVufK0j6aa0fY34tx4aTXka6yavY14fZDeZFlJmPAjzPhMZmXXA==}
     peerDependencies:
-      '@goat-sdk/core': 0.4.0
+      '@goat-sdk/core': 0.4.6
 
   '@goat-sdk/wallet-viem@0.1.3':
     resolution: {integrity: sha512-2uofsH/dVmeJk/4V2/tJ1rDk6/ZFQlthUO50tg366hjq0vjINJXMQqYGwSLnv5Z3PMmdfPCSd5xikFEfA+1ZZw==}
@@ -5865,10 +5896,10 @@ packages:
       '@goat-sdk/core': 0.3.4
       viem: 2.21.58
 
-  '@goat-sdk/wallet-viem@0.2.0':
-    resolution: {integrity: sha512-x9FTUg9/ZhJyx8tQMAuIGmoFfRkmyDge78yvd9CTK6SQTiYQ/Hio7rAmHjLE95lElXb6EumZu7R0IlX3m/SGSw==}
+  '@goat-sdk/wallet-viem@0.2.6':
+    resolution: {integrity: sha512-fUhuE6XIlLc9y5dgqTYWNTqls8Qb97R1q89VPOUMz5C9GYx/jwcwdXBmZkH8zbKa+w6UrNeMy6FnHBzlCCXxPg==}
     peerDependencies:
-      '@goat-sdk/wallet-evm': 0.2.0
+      '@goat-sdk/wallet-evm': 0.2.6
       viem: 2.21.58
 
   '@google-cloud/vertexai@1.9.2':
@@ -16684,6 +16715,11 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@5.0.4:
+    resolution: {integrity: sha512-vAjmBf13gsmhXSgBrtIclinISzFFy22WwCYoyilZlsrRXNIHSwgFQ1bEdjRwMT3aoadeIF6HMuDRlOxzfXV8ig==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   nanoid@5.0.9:
     resolution: {integrity: sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==}
     engines: {node: ^18 || >=20}
@@ -22140,6 +22176,9 @@ packages:
     peerDependencies:
       zod: ^3.24.1
 
+  zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -24877,6 +24916,27 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@crossmint/client-sdk-base@1.4.4':
+    dependencies:
+      '@crossmint/client-sdk-window': 0.2.2
+      '@crossmint/common-sdk-base': 0.3.1
+      '@datadog/browser-logs': 4.42.2
+      exponential-backoff: 3.1.1
+      uuid: 9.0.1
+      zod: 3.22.4
+    transitivePeerDependencies:
+      - '@datadog/browser-rum'
+
+  '@crossmint/client-sdk-window@0.2.2':
+    dependencies:
+      nanoid: 5.0.4
+      zod: 3.22.4
+
+  '@crossmint/common-sdk-base@0.3.1':
+    dependencies:
+      bs58: 5.0.0
+      tweetnacl: 1.0.3
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -25132,6 +25192,12 @@ snapshots:
   '@csstools/utilities@2.0.0(postcss@8.4.49)':
     dependencies:
       postcss: 8.4.49
+
+  '@datadog/browser-core@4.42.2': {}
+
+  '@datadog/browser-logs@4.42.2':
+    dependencies:
+      '@datadog/browser-core': 4.42.2
 
   '@deepgram/captions@1.2.0':
     dependencies:
@@ -27137,9 +27203,9 @@ snapshots:
       '@shikijs/types': 1.26.1
       '@shikijs/vscode-textmate': 10.0.1
 
-  '@goat-sdk/adapter-vercel-ai@0.2.0(@goat-sdk/core@0.4.0)(ai@4.0.33(react@19.0.0)(zod@3.23.8))':
+  '@goat-sdk/adapter-vercel-ai@0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(ai@4.0.33(react@19.0.0)(zod@3.23.8))(zod@3.23.8)':
     dependencies:
-      '@goat-sdk/core': 0.4.0
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
       ai: 4.0.33(react@19.0.0)(zod@3.23.8)
       zod: 3.23.8
 
@@ -27155,7 +27221,7 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@goat-sdk/core@0.4.0':
+  '@goat-sdk/core@0.4.6(zod@3.23.8)':
     dependencies:
       reflect-metadata: 0.2.2
       zod: 3.23.8
@@ -27166,16 +27232,30 @@ snapshots:
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
 
+  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.4(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+    dependencies:
+      '@crossmint/client-sdk-base': 1.4.4
+      '@crossmint/common-sdk-base': 0.3.1
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
+      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@datadog/browser-rum'
+      - bufferutil
+      - typescript
+      - utf-8-validate
+
   '@goat-sdk/plugin-erc20@0.1.7(@goat-sdk/core@0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
       '@goat-sdk/core': 0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
 
-  '@goat-sdk/plugin-erc20@0.2.2(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/plugin-erc20@0.2.8(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
-      '@goat-sdk/core': 0.4.0
-      '@goat-sdk/wallet-evm': 0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
+      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
     transitivePeerDependencies:
@@ -27183,20 +27263,14 @@ snapshots:
       - typescript
       - utf-8-validate
 
-  '@goat-sdk/plugin-kim@0.1.2(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/plugin-worldstore@0.0.2(@goat-sdk/core@0.4.6(zod@3.23.8))':
     dependencies:
-      '@goat-sdk/core': 0.4.0
-      '@goat-sdk/wallet-evm': 0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
-      viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
       zod: 3.23.8
-    transitivePeerDependencies:
-      - bufferutil
-      - typescript
-      - utf-8-validate
 
-  '@goat-sdk/wallet-evm@0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)':
+  '@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)':
     dependencies:
-      '@goat-sdk/core': 0.4.0
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
       abitype: 1.0.8(typescript@5.7.3)(zod@3.23.8)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
@@ -27210,9 +27284,9 @@ snapshots:
       '@goat-sdk/core': 0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
 
-  '@goat-sdk/wallet-viem@0.2.0(@goat-sdk/wallet-evm@0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/wallet-viem@0.2.6(@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
-      '@goat-sdk/wallet-evm': 0.2.0(@goat-sdk/core@0.4.0)(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
 
   '@google-cloud/vertexai@1.9.2(encoding@0.1.13)':
@@ -34483,6 +34557,11 @@ snapshots:
     optionalDependencies:
       typescript: 5.7.3
       zod: 3.23.8
+
+  abitype@1.0.8(typescript@5.7.3)(zod@3.24.1):
+    optionalDependencies:
+      typescript: 5.7.3
+      zod: 3.24.1
 
   abort-controller@3.0.0:
     dependencies:
@@ -43094,6 +43173,8 @@ snapshots:
 
   nanoid@3.3.8: {}
 
+  nanoid@5.0.4: {}
+
   nanoid@5.0.9: {}
 
   napi-build-utils@1.0.2: {}
@@ -43828,7 +43909,7 @@ snapshots:
       '@noble/hashes': 1.6.1
       '@scure/bip32': 1.6.1
       '@scure/bip39': 1.5.1
-      abitype: 1.0.7(typescript@5.7.3)(zod@3.24.1)
+      abitype: 1.0.8(typescript@5.7.3)(zod@3.24.1)
       eventemitter3: 5.0.1
     optionalDependencies:
       typescript: 5.7.3
@@ -50047,6 +50128,8 @@ snapshots:
   zod-to-json-schema@3.24.1(zod@3.24.1):
     dependencies:
       zod: 3.24.1
+
+  zod@3.22.4: {}
 
   zod@3.23.8: {}
 

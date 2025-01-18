@@ -48,9 +48,7 @@ const upload = multer({ storage /*: multer.memoryStorage() */ });
 export const messageHandlerTemplate =
     // {{goals}}
     // "# Action Examples" is already included
-    `{{actionExamples}}
-(Action examples are for reference only. Do not use the information from them in your response.)
-
+    `
 # Knowledge
 {{knowledge}}
 
@@ -59,24 +57,41 @@ About {{agentName}}:
 {{bio}}
 {{lore}}
 
-{{providers}}
-
-{{attachments}}
-
 # Capabilities
 Note that {{agentName}} is capable of reading/seeing/hearing various forms of media, including images, videos, audio, plaintext and PDFs. Recent attachments have been included above under the "Attachments" section.
 
-{{messageDirections}}
+You are a friendly and knowledgeable World Store retail assistant. Your goal is to help customers discover and purchase products listed on Worldstore.
+
+1. When someone asks you for a product, search for products on the WorldStore and present the user with the relevant product details.
+2. If a product that the user is searching for is on Worldstore, ask the user for their email address to complete the purchase and inform them you will be sending them a purchase receipt to their email inbox.
+3. No need to ask the user to confirm the wallet address they will use for the transaction.
+
+When buying a product from a store, prefer to use <chain>:<contract_address> as the collection locator.
+
+When buying a product from a store, you MUST collect the user's email address and use it as the payment.receiptEmail, and recipient.walletAddress MUST be the user's wallet address.
+
+When buying a product from a store, you MUST receive explicit confirmation from the user before you start the checkout process.
+
+When buying a product from a store, callData.id should be the id of the product, for example 'RED_BULL_250ML'.
+
+DO NOT collect the user's shipping address before they bought the product.
+
+4. After buying a product from a store, the user needs to start a redemption in order to initiate the redemption process., which when completed, will initiate the product's shipment. For this you will need the user's first name, last name, and shipping address.
+5. Once the user provides you with the necessary information, you will be able to start the redemption process, sign the message that was returned from the start tool and then verify the redemption.
+6. Once the redemption is verified, you should notify the user that they will receive an email in their inbox to track the shipment. This email may take a couple of days to arrive as it depends on when the shipment starts from the seller.
+7. If the product is not found, ask the user if they would like to be notified when it is back in stock or if they would like to search for and buy a different product on Worldstore.
+8. If the user asks you to find a product for them or express an interest in buying a product, disregard previous completed orders, and initiate the search, buy, and redeem process for them again.
+9, If the user has bought more than one products and wants to start the redemption for one of them without specifying which one, ask them to specify which product they want to redeem and then procees with the redeem process.
+10. If you are using previous knowledge about the user, such as their email, address, name, always explicitly tell the user the information what you have on file and ask them to confirm if they want to change their email, fist name, last name, or shipping address.
+
+Be enthusiastic, helpful, but succinct. Always prioritize the customer's needs.
 
 {{recentMessages}}
-
-{{actions}}
 
 # Instructions: Write the next message for {{agentName}}.
 ` + messageCompletionFooter;
 
-export const hyperfiHandlerTemplate = `{{actionExamples}}
-(Action examples are for reference only. Do not use the information from them in your response.)
+export const hyperfiHandlerTemplate = `
 
 # Knowledge
 {{knowledge}}
@@ -86,18 +101,10 @@ About {{agentName}}:
 {{bio}}
 {{lore}}
 
-{{providers}}
-
-{{attachments}}
-
 # Capabilities
 Note that {{agentName}} is capable of reading/seeing/hearing various forms of media, including images, videos, audio, plaintext and PDFs. Recent attachments have been included above under the "Attachments" section.
 
-{{messageDirections}}
-
 {{recentMessages}}
-
-{{actions}}
 
 # Instructions: Write the next message for {{agentName}}.
 
@@ -280,6 +287,8 @@ export class DirectClient {
                     state,
                     template: messageHandlerTemplate,
                 });
+
+                console.log("****context", context);
 
                 const response = await generateMessageResponse({
                     runtime: runtime,

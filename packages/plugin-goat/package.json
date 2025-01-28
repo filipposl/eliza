@@ -27,6 +27,7 @@
         "@goat-sdk/plugin-erc20": "latest",
         "@goat-sdk/wallet-evm": "latest",
         "@goat-sdk/wallet-viem": "latest",
+        "@goat-sdk/crossmint": "0.3.15",
         "tsup": "8.3.5"
     },
     "scripts": {

@@ -761,13 +761,13 @@ importers:
     dependencies:
       '@discordjs/opus':
         specifier: github:discordjs/opus
-        version: https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13)
+        version: https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13)
       '@discordjs/rest':
         specifier: 2.4.0
         version: 2.4.0
       '@discordjs/voice':
         specifier: 0.17.0
-        version: 0.17.0(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13))(bufferutil@4.0.9)(ffmpeg-static@5.2.0)(utf-8-validate@5.0.10)
+        version: 0.17.0(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13))(bufferutil@4.0.9)(ffmpeg-static@5.2.0)(utf-8-validate@5.0.10)
       '@elizaos/core':
         specifier: workspace:*
         version: link:../core
@@ -782,7 +782,7 @@ importers:
         version: 0.7.15
       prism-media:
         specifier: 1.3.5
-        version: 1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13))(ffmpeg-static@5.2.0)
+        version: 1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13))(ffmpeg-static@5.2.0)
       whatwg-url:
         specifier: 7.1.0
         version: 7.1.0
@@ -1731,21 +1731,24 @@ importers:
       '@goat-sdk/core':
         specifier: latest
         version: 0.4.6(zod@3.23.8)
+      '@goat-sdk/crossmint':
+        specifier: 0.3.15
+        version: 0.3.15(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)
       '@goat-sdk/plugin-crossmint-headless-checkout':
         specifier: latest
-        version: 0.0.4(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+        version: 0.0.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
       '@goat-sdk/plugin-erc20':
         specifier: latest
-        version: 0.2.8(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+        version: 0.2.9(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
       '@goat-sdk/plugin-worldstore':
         specifier: latest
         version: 0.0.2(@goat-sdk/core@0.4.6(zod@3.23.8))
       '@goat-sdk/wallet-evm':
         specifier: latest
-        version: 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+        version: 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       '@goat-sdk/wallet-viem':
         specifier: latest
-        version: 0.2.6(@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
+        version: 0.2.7(@goat-sdk/wallet-evm@0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))
       tsup:
         specifier: 8.3.5
         version: 8.3.5(@swc/core@1.10.7(@swc/helpers@0.5.15))(jiti@2.4.2)(postcss@8.4.49)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
@@ -4621,9 +4624,9 @@ packages:
     resolution: {integrity: sha512-YJOVVZ545x24mHzANfYoy0BJX5PDyeZlpiJjDkUBM/V/Ao7TFX9lcUvCN4nr0tbr5ubeaXxtEBILUrHtTphVeQ==}
     hasBin: true
 
-  '@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02':
-    resolution: {tarball: https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02}
-    version: 0.9.0
+  '@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2':
+    resolution: {tarball: https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2}
+    version: 0.10.0
     engines: {node: '>=12.0.0'}
 
   '@discordjs/rest@2.4.0':
@@ -5854,14 +5857,19 @@ packages:
     peerDependencies:
       zod: ^3.0.0
 
+  '@goat-sdk/crossmint@0.3.15':
+    resolution: {integrity: sha512-VNF2CwV7kbGpNyDhQxvzCYDxASztGUKYQwtNdmemEO1KSt4qakCJ4qrlU4PeW5nu18XLcqyleZMk+yJ6LwP5pg==}
+    peerDependencies:
+      '@goat-sdk/core': 0.4.6
+
   '@goat-sdk/plugin-coingecko@0.1.4':
     resolution: {integrity: sha512-i85v/SeCXB7/fcqZKc0hV68/3FrUAHJSL4N5AUp5OPauzV5kq4Ecn0WjeDZEHX8iCEEY1NZSZ47yweDckAhjhA==}
     peerDependencies:
       '@goat-sdk/core': 0.3.14
       viem: 2.21.58
 
-  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.4':
-    resolution: {integrity: sha512-liCU+VKNmDW2TGdB70nA18BUVwV1U9iWbHEHAQCAqg7PGwCgIVHLKyg7KaWsaOoVFweGXssjZKAZ+eMCfKxrog==}
+  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.6':
+    resolution: {integrity: sha512-pLIQOT1ovWY9/6MQzrs+ta2f02ik86LToAOq7JZ37lqyftgVSAQ8RTAp2VLVbDbQcXRJ5IY8hVbHYtVCb0uECg==}
     peerDependencies:
       '@goat-sdk/core': 0.4.6
       viem: 2.21.58
@@ -5873,8 +5881,8 @@ packages:
       '@goat-sdk/core': 0.3.8
       viem: 2.21.58
 
-  '@goat-sdk/plugin-erc20@0.2.8':
-    resolution: {integrity: sha512-KVz4g3YtLWxmj0+ahi8Zy9DXPCsHn+dFvoN2cJRzrDWTbeTh8tNPl33FT2sf9P9p9R7vV/9YmFJd0iUVh9Nf/Q==}
+  '@goat-sdk/plugin-erc20@0.2.9':
+    resolution: {integrity: sha512-lUhCDn55wqccq82HKd2CKlYx33Cz3hWYkevwAdgTLD78Bk9gCURw11f+02YKYyYPFaxN17bC0UPrJ51DNitAAw==}
     peerDependencies:
       '@goat-sdk/core': 0.4.6
       viem: 2.21.58
@@ -5884,10 +5892,16 @@ packages:
     peerDependencies:
       '@goat-sdk/core': 0.4.6
 
-  '@goat-sdk/wallet-evm@0.2.6':
-    resolution: {integrity: sha512-KzC2jbfGi0CsVLLWyvxQheFWNuKMKiafgjyGVufK0j6aa0fY34tx4aTXka6yavY14fZDeZFlJmPAjzPhMZmXXA==}
+  '@goat-sdk/wallet-evm@0.2.7':
+    resolution: {integrity: sha512-1lWDAn/QAnGb6k7Fd8pS6g6Rz9jU2HB5mS/auxRyex9ohRnYlCluFz9aBo0G9rPVfPrviyMbVH+yCB1Fl3VxPg==}
     peerDependencies:
       '@goat-sdk/core': 0.4.6
+
+  '@goat-sdk/wallet-solana@0.2.12':
+    resolution: {integrity: sha512-ZxtQlvEFyDIVcsawJAKjEpvWJ7VFXSoaCZfqa4mdicCxHDieXjbkDb3tKBtbI5sYzgylsUVe0JrZvTyP5ZgTzA==}
+    peerDependencies:
+      '@goat-sdk/core': 0.4.6
+      '@solana/web3.js': 1.95.8
 
   '@goat-sdk/wallet-viem@0.1.3':
     resolution: {integrity: sha512-2uofsH/dVmeJk/4V2/tJ1rDk6/ZFQlthUO50tg366hjq0vjINJXMQqYGwSLnv5Z3PMmdfPCSd5xikFEfA+1ZZw==}
@@ -5896,10 +5910,10 @@ packages:
       '@goat-sdk/core': 0.3.4
       viem: 2.21.58
 
-  '@goat-sdk/wallet-viem@0.2.6':
-    resolution: {integrity: sha512-fUhuE6XIlLc9y5dgqTYWNTqls8Qb97R1q89VPOUMz5C9GYx/jwcwdXBmZkH8zbKa+w6UrNeMy6FnHBzlCCXxPg==}
+  '@goat-sdk/wallet-viem@0.2.7':
+    resolution: {integrity: sha512-PYH6HSQ1/A87zeluRqrRop+eaC8i//EUEHgRd9FvdI8prp+bHI2OFTk/h5AdH37cowCUUxHjUd9rtuBQkxMusQ==}
     peerDependencies:
-      '@goat-sdk/wallet-evm': 0.2.6
+      '@goat-sdk/wallet-evm': 0.2.7
       viem: 2.21.58
 
   '@google-cloud/vertexai@1.9.2':
@@ -25288,7 +25302,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13)':
+  '@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13)':
     dependencies:
       '@discordjs/node-pre-gyp': 0.4.5(encoding@0.1.13)
       node-addon-api: 8.3.0
@@ -25310,11 +25324,11 @@ snapshots:
 
   '@discordjs/util@1.1.1': {}
 
-  '@discordjs/voice@0.17.0(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13))(bufferutil@4.0.9)(ffmpeg-static@5.2.0)(utf-8-validate@5.0.10)':
+  '@discordjs/voice@0.17.0(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13))(bufferutil@4.0.9)(ffmpeg-static@5.2.0)(utf-8-validate@5.0.10)':
     dependencies:
       '@types/ws': 8.5.13
       discord-api-types: 0.37.83
-      prism-media: 1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13))(ffmpeg-static@5.2.0)
+      prism-media: 1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13))(ffmpeg-static@5.2.0)
       tslib: 2.8.1
       ws: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
     transitivePeerDependencies:
@@ -27226,18 +27240,35 @@ snapshots:
       reflect-metadata: 0.2.2
       zod: 3.23.8
 
+  '@goat-sdk/crossmint@0.3.15(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@crossmint/common-sdk-base': 0.3.1
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
+      '@goat-sdk/wallet-evm': 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/wallet-solana': 0.2.12(@goat-sdk/core@0.4.6(zod@3.23.8))(@solana/web3.js@1.95.8(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@solana/web3.js': 1.95.8(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      abitype: 1.0.8(typescript@5.7.3)(zod@3.23.8)
+      bs58: 6.0.0
+      viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - typescript
+      - utf-8-validate
+
   '@goat-sdk/plugin-coingecko@0.1.4(@goat-sdk/core@0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
       '@goat-sdk/core': 0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
 
-  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.4(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/plugin-crossmint-headless-checkout@0.0.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
       '@crossmint/client-sdk-base': 1.4.4
       '@crossmint/common-sdk-base': 0.3.1
       '@goat-sdk/core': 0.4.6(zod@3.23.8)
-      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/wallet-evm': 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
     transitivePeerDependencies:
@@ -27252,10 +27283,10 @@ snapshots:
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
 
-  '@goat-sdk/plugin-erc20@0.2.8(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/plugin-erc20@0.2.9(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
       '@goat-sdk/core': 0.4.6(zod@3.23.8)
-      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/wallet-evm': 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
     transitivePeerDependencies:
@@ -27268,10 +27299,22 @@ snapshots:
       '@goat-sdk/core': 0.4.6(zod@3.23.8)
       zod: 3.23.8
 
-  '@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)':
+  '@goat-sdk/wallet-evm@0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@goat-sdk/core': 0.4.6(zod@3.23.8)
       abitype: 1.0.8(typescript@5.7.3)(zod@3.23.8)
+      viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+
+  '@goat-sdk/wallet-solana@0.2.12(@goat-sdk/core@0.4.6(zod@3.23.8))(@solana/web3.js@1.95.8(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@goat-sdk/core': 0.4.6(zod@3.23.8)
+      '@solana/web3.js': 1.95.8(bufferutil@4.0.9)(encoding@0.1.13)(utf-8-validate@5.0.10)
+      tweetnacl: 1.0.3
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
       zod: 3.23.8
     transitivePeerDependencies:
@@ -27284,9 +27327,9 @@ snapshots:
       '@goat-sdk/core': 0.3.8(bufferutil@4.0.9)(encoding@0.1.13)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
 
-  '@goat-sdk/wallet-viem@0.2.6(@goat-sdk/wallet-evm@0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
+  '@goat-sdk/wallet-viem@0.2.7(@goat-sdk/wallet-evm@0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10))(viem@2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8))':
     dependencies:
-      '@goat-sdk/wallet-evm': 0.2.6(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
+      '@goat-sdk/wallet-evm': 0.2.7(@goat-sdk/core@0.4.6(zod@3.23.8))(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)
       viem: 2.21.58(bufferutil@4.0.9)(typescript@5.7.3)(utf-8-validate@5.0.10)(zod@3.23.8)
 
   '@google-cloud/vertexai@1.9.2(encoding@0.1.13)':
@@ -45246,9 +45289,9 @@ snapshots:
 
   pretty-time@1.1.0: {}
 
-  prism-media@1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13))(ffmpeg-static@5.2.0):
+  prism-media@1.3.5(@discordjs/opus@https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13))(ffmpeg-static@5.2.0):
     optionalDependencies:
-      '@discordjs/opus': https://codeload.github.com/discordjs/opus/tar.gz/31da49d8d2cc6c5a2ab1bfd332033ff7d5f9fb02(encoding@0.1.13)
+      '@discordjs/opus': https://codeload.github.com/discordjs/opus/tar.gz/679ff3f58e6804b80becc166c7214deb2ca026e2(encoding@0.1.13)
       ffmpeg-static: 5.2.0
 
   prism-react-renderer@2.3.1(react@18.3.1):

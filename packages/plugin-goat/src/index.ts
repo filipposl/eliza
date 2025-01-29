@@ -10,7 +10,7 @@ async function createGoatPlugin(
 
     return {
         name: "[GOAT] Onchain Actions",
-        description: "Mode integration plugin",
+        description: "Delivery integration plugin",
         providers: [getWalletProvider(walletClient)],
         evaluators: [],
         services: [],
